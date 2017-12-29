@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  sarosd The Saros Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: sarosd
+# processname: sarosd
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/sarosd, see below
+if [ -f /etc/sysconfig/sarosd ]; then
+        . /etc/sysconfig/sarosd
+fi
+
+RETVAL=0
+
+prog=sarosd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/sarosd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/sarosd}
+
+# sarosd defaults to /usr/bin/sarosd, override with BITCOIND_BIN
+sarosd=${BITCOIND_BIN-/usr/bin/sarosd}
+
+# sarosd opts default to -disablewallet, override with BITCOIND_OPTS
+sarosd_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $sarosd $sarosd_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac

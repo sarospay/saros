@@ -1,0 +1,6 @@
+usr/local/bin/saros-qt usr/bin
+share/pixmaps/saros32.xpm usr/share/pixmaps
+share/pixmaps/saros16.xpm usr/share/pixmaps
+share/pixmaps/saros128.png usr/share/pixmaps
+debian/saros-qt.desktop usr/share/applications
+debian/saros-qt.protocol usr/share/kde4/services/

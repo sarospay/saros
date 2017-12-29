@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/saros_bg.qm</file>
+        <file alias="de">locale/saros_de.qm</file>
+        <file alias="en">locale/saros_en.qm</file>
+        <file alias="es">locale/saros_es.qm</file>
+        <file alias="fi">locale/saros_fi.qm</file>
+        <file alias="fr">locale/saros_fr.qm</file>
+        <file alias="it">locale/saros_it.qm</file>
+        <file alias="ja">locale/saros_ja.qm</file>
+        <file alias="pl">locale/saros_pl.qm</file>
+        <file alias="pt">locale/saros_pt.qm</file>
+        <file alias="ru">locale/saros_ru.qm</file>
+        <file alias="sk">locale/saros_sk.qm</file>
+        <file alias="sv">locale/saros_sv.qm</file>
+        <file alias="vi">locale/saros_vi.qm</file>
+        <file alias="zh_CN">locale/saros_zh_CN.qm</file>
+        <file alias="zh_TW">locale/saros_zh_TW.qm</file>
+    </qresource>
+</RCC>

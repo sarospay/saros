@@ -1,0 +1,3 @@
+debian/manpages/sarosd.1
+debian/manpages/saros.conf.5
+debian/manpages/saros-cli.1

@@ -1,0 +1,11 @@
+[Protocol]
+exec=saros-qt '%u'
+protocol=saros
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

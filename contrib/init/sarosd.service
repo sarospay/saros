@@ -1,0 +1,22 @@
+[Unit]
+Description=Saros's distributed currency daemon
+After=network.target
+
+[Service]
+User=saroscore
+Group=saroscore
+
+Type=forking
+PIDFile=/var/lib/sarosd/sarosd.pid
+ExecStart=/usr/bin/sarosd -daemon -pid=/var/lib/sarosd/sarosd.pid \
+-conf=/etc/saroscore/saros.conf -datadir=/var/lib/sarosd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
