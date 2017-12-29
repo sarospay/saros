@@ -45,8 +45,8 @@ const std::string CLIENT_NAME("Saros Core");
 //! git will put "#define GIT_ARCHIVE 1" on the next line inside archives. 
 #define GIT_ARCHIVE 1
 #ifdef GIT_ARCHIVE
-#define GIT_COMMIT_ID "20bacfab9b0"
-#define GIT_COMMIT_DATE "Sat, 11 Nov 2017 10:02:45 +0300"
+#define GIT_COMMIT_ID "9fa6c15"
+#define GIT_COMMIT_DATE "Dec 29, 2017"
 #endif
 
 #define BUILD_DESC_WITH_SUFFIX(maj, min, rev, build, suffix) \
