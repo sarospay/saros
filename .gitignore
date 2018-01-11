@@ -61,7 +61,7 @@ libconftest.dylib*
 *.pyc
 *.o
 *.o-*
-*.patch
+#*.patch
 .saros
 *.a
 *.pb.cc
@@ -82,7 +82,7 @@ libconftest.dylib*
 *.qm
 Makefile
 saros-qt
-Saros-Qt.app
+Dash-Qt.app
 
 # Unit-tests
 Makefile.test
@@ -117,6 +117,7 @@ cache/
 share/BitcoindComparisonTool.jar
 
 !src/leveldb*/Makefile
+!depends/Makefile
 
 .cproject
 .project
