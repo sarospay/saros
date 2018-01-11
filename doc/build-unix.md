@@ -157,8 +157,7 @@ tar -xzvf db-4.8.30.NC.tar.gz
 # Build the library and install to our prefix
 cd db-4.8.30.NC/build_unix/
 #  Note: Do a static build so that it can be embedded into the executable, instead of having to find a .so at runtime
-../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
-make install
+../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX && make install
 
 # Configure Saros Core to use our own-built instance of BDB
 cd $SAROS_ROOT
